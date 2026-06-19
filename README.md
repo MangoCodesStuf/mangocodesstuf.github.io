@@ -1,15 +1,3 @@
-# Go to 👉 https://mangocodesstuf.github.io/
+# Go to 👉 https://mangocodesstuf.github.io/  🥭
 
 
-
-
-
-
-
-
-
-
-
-
-
-👋 🥭 -  Mango
