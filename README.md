@@ -1,4 +1,4 @@
-# [mangocodesstuf.github.io](mangocodesstuf.github.io)
+# [mangocodesstuf.github.io]
 
 
 
