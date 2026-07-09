@@ -1,75 +1,54 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <meta charset="utf-8">
-    <meta name="download_date" content="2026-06-19T16:48:32.372Z" />
-    <title>Mango</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="color-scheme" content="light only">
-    <meta name="description" content="A">
-    <meta property="og:site_name" content="Mango">
-    <meta property="og:title" content="Mango">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="A">
-    <meta property="og:image" content="https://mangocodes.carrd.co/assets/images/card.jpg?v=98c22990">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="1280">
-    <meta property="og:image:height" content="800">
-    <meta property="og:url" content="https://mangocodes.carrd.co">
-    <meta property="twitter:card" content="summary_large_image">
-    <link rel="canonical" href="index.html">
-    <style>
-        #introOverlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 999999999;
-            opacity: 1;
-        }
-        #introVideo {
-            width: 320px;
-            max-width: 90vw;
-            max-height: 90vh;
-        }
-    </style>
-    <style>
-        body {
-            transition: opacity ease-in 0.2s;
-        }
-        body[unresolved] {
-            opacity: 0;
-            display: block;
-            overflow: hidden;
-            position: relative;
-        }
-    </style>
-    <noscript>
-        <style>
-            body {
-                overflow: auto !important;
-            }
-            body::after {
-                display: none !important;
-            }
-            .site-main>.inner {
-                opacity: 1.0 !important;
-            }
-            .site-main {
-                opacity: 1.0 !important;
-                transform: none !important;
-                transition: none !important;
-                filter: none !important;
-            }
-        </style>
-    </noscript>
-    <style>
+<!DOCTYPE html><html><head><body><link rel="icon" href="favicon.png">
+
+<!-- Intro Overlay -->
+<div id="introOverlay">
+    <video id="introVideo" autoplay muted playsinline>
+        <source src="intro.mp4" type="video/mp4">
+    </video>
+</div>
+
+<style>
+#introOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999999;
+    opacity: 1;
+}
+
+#introVideo {
+    width: 320px;
+    max-width: 90vw;
+    max-height: 90vh;
+}
+</style>
+
+<script>
+window.addEventListener('load', function () {
+    const overlay = document.getElementById('introOverlay');
+    const video = document.getElementById('introVideo');
+
+    function closeIntro() {
+        overlay.style.transition = 'opacity 0.5s ease';
+        overlay.style.opacity = '0';
+
+        setTimeout(() => {
+            overlay.remove();
+        }, 500);
+    }
+
+    video.addEventListener('ended', closeIntro);
+
+    video.addEventListener('error', closeIntro);
+
+    setTimeout(closeIntro, 15000);
+});
 </script><link rel="icon" href="favicon.png"><meta charset="utf-8"><meta name="download_date" content="2026-06-19T16:48:32.372Z"/><style>body {transition: opacity ease-in 0.2s; } 
 body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
 </style><title>Mango</title><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light only"><meta name="description" content="A"><meta property="og:site_name" content="Mango"><meta property="og:title" content="Mango"><meta property="og:type" content="website"><meta property="og:description" content="A"><meta property="og:image" content="https://mangocodes.carrd.co/assets/images/card.jpg?v=98c22990"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:width" content="1280"><meta property="og:image:height" content="800"><meta property="og:url" content="https://mangocodes.carrd.co"><meta property="twitter:card" content="summary_large_image"><link rel="canonical" href="index.html"><style>/* vietnamese */
