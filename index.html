@@ -87,8 +87,18 @@
             gap: 1.75rem;
         }
 
+        /* ---------- Shared box style (hero + cards) ---------- */
+        .box {
+            width: 100%;
+            border: 3px solid #4F4F4F;
+            border-radius: 1rem;
+            box-shadow: 0.265rem 0.265rem 0 0 #4F4F4F;
+        }
+
         /* ---------- Hero ---------- */
         .hero {
+            background: #FEFCF2;
+            padding: 2rem;
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -127,12 +137,9 @@
         .card {
             display: flex;
             align-items: center;
-            width: 100%;
             padding: 2rem;
-            border: 3px solid #4F4F4F;
-            border-radius: 1rem;
-            box-shadow: 0.265rem 0.265rem 0 0 #4F4F4F;
             gap: 1rem;
+            animation: fadeIn 0.8s ease both;
         }
 
         .card .text {
@@ -236,24 +243,16 @@
             color: rgba(152, 61, 47, 0.502);
         }
 
-        .credits a {
-            color: inherit;
-        }
-
         /* ---------- Entrance animation ---------- */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(1rem); }
             to   { opacity: 1; transform: none; }
         }
 
-        .card {
-            animation: fadeIn 0.8s ease both;
-        }
-
-        .card:nth-child(1) { animation-delay: 0.4s; }
-        .card:nth-child(2) { animation-delay: 0.55s; }
-        .card:nth-child(3) { animation-delay: 0.7s; }
-        .card:nth-child(4) { animation-delay: 0.85s; }
+        .card:nth-child(2) { animation-delay: 0.15s; }
+        .card:nth-child(3) { animation-delay: 0.3s; }
+        .card:nth-child(4) { animation-delay: 0.45s; }
+        .card:nth-child(5) { animation-delay: 0.6s; }
 
         /* ---------- Mobile ---------- */
         @media (max-width: 736px) {
@@ -312,14 +311,14 @@
         <div class="inner">
 
             <!-- Hero -->
-            <section class="hero">
-                <img class="avatar" src="profile.png" alt="Mango">
+            <section class="box hero">
+                <img class="avatar" src="https://i.imgur.com/Bo5WDQj.png" alt="Mango">
                 <h1>Mango</h1>
                 <p>I like programming and having fun</p>
             </section>
 
             <!-- Games -->
-            <section class="card yellow">
+            <section class="box card yellow">
                 <div class="text">
                     <h2>Games</h2>
                     <p>All the games I've made</p>
@@ -334,7 +333,7 @@
             </section>
 
             <!-- Interactive projects -->
-            <section class="card blue">
+            <section class="box card blue">
                 <div class="text">
                     <h2>Interactive projects</h2>
                     <p>Test projects which are not games yet</p>
@@ -349,7 +348,7 @@
             </section>
 
             <!-- Everything else -->
-            <section class="card pink">
+            <section class="box card pink">
                 <div class="text">
                     <h2>Everything else...</h2>
                     <p>I don't even know how to categorize this</p>
@@ -364,7 +363,7 @@
             </section>
 
             <!-- Update board -->
-            <section class="card green">
+            <section class="box card green">
                 <div class="text">
                     <h2>Update board</h2>
                     <p>Discover updates on games and legacy archives</p>
@@ -402,7 +401,7 @@
                 </a>
             </nav>
 
-            <p class="credits">mangocodesstuf</p>
+            <p class="credits">Made by Mangocodesstuf</p>
 
         </div>
     </main>
